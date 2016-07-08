@@ -25,6 +25,11 @@ textarea{
 	height:95% ;
 }
 
-li{
+
+ol{
 	width: 25%;
+	margin: 17px auto;
+}
+li{
+padding: 5px;
 }
