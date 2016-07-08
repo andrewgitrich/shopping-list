@@ -5,8 +5,7 @@ $('#add').click(function(){
         $('<li />', {html: text}).appendTo('ol.shoppinglist');
     }
     // clears the input field when add button clicked
-    $("input").val("");
-   
+    $("input").val("");  
 });
 
 
@@ -16,10 +15,17 @@ $('ol').on('click','button' , function(el){
 });
 
 
+// trying to line-through when li is clicked NOT WORKING
+ $("li").click(function() {
+        $(this).toggleClass(".test");
+    });
 
-
-
-
+/*features i want to add
+1.enter adds text to list from imput field
+2. dropdown menu for general items
+3. line-through when a li is clicked, 
+and remved when clicked again
+*/
 
 
 
