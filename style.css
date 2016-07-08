@@ -1,0 +1,30 @@
+
+
+.row{
+	width: 100%;
+	display: flex;
+
+}
+
+
+.list{
+	text-align:center; 
+	width: 75%;
+
+}
+
+
+.notes{
+	height:300px; 
+	width:25%;
+	
+}
+
+textarea{
+	width:93%; 
+	height:95% ;
+}
+
+li{
+	width: 25%;
+}
