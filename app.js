@@ -1,24 +1,24 @@
 $(document).ready(function(){
-$('#add').click(function(){
-    var text = $('input').val() + '  <button>x</button>';
-    if(text.length){
-        $('<li />', {html: text}).appendTo('ol.shoppinglist');
-    }
-    // clears the input field when add button clicked
-    $("input").val("");  
-});
+// $('#add').click(function(){
+//     var text = $('input').val() + '  <button>x</button>';
+//     if(text.length){
+//         $('<li />', {html: text}).appendTo('ol.shoppinglist');
+//     }
+//     // clears the input field when add button clicked
+//     $("input").val("");  
+// });
 
 
-// this removes the added list item by clicking the x
-$('ol').on('click','button' , function(el){
-    $(this).parent().remove();
-});
+// // this removes the added list item by clicking the x
+// $('ol').on('click','button' , function(el){
+//     $(this).parent().remove();
+// });
 
 
-// trying to line-through when li is clicked NOT WORKING
- $("li").click(function() {
-        $(this).toggleClass(".test");
-    });
+// // trying to line-through when li is clicked NOT WORKING
+//  $("li").click(function() {
+//         $(this).toggleClass(".test");
+//     });
 
 /*features i want to add
 1.enter adds text to list from imput field
@@ -26,9 +26,29 @@ $('ol').on('click','button' , function(el){
 3. line-through when a li is clicked, 
 and remved when clicked again
 */
+$('#add').click(function() {
+   $('ol').append('<li>' + $('input').val() + '   <button>x</button></li>');
+   $("input").val("");
+});
 
 
+$('ol').on('click', 'button', function() {
+   $(this).parent().remove();
+});
 
+
+// click on li to create a line through
+$("ol").on("click", "li", function() {
+  $(this).toggleClass("test");
+
+});
+
+// trying to add to li when enter is pressed not workimg
+$("input").keydown.keyCode()(function(){
+  
+  $('ol').append('<li>' + $('input').val() + '   <button>x</button></li>');
+   $("input").val("");
+});
 
 
 
