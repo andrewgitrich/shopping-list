@@ -3,6 +3,7 @@
 .row{
 	width: 100%;
 	display: flex;
+
 }
 
 
@@ -33,6 +34,15 @@ padding: 5px;
 }
 
 
-.test {
+.test{
     text-decoration: line-through;
+}
+
+h1, h2, button, p{
+	font-family: 'Indie Flower', cursive, sans-serif; 
+}
+
+h1{
+font-size: 50px;
+letter-spacing: 4px;
 }

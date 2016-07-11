@@ -43,11 +43,13 @@ $("ol").on("click", "li", function() {
 
 });
 
-// trying to add to li when enter is pressed not workimg
-$("input").keydown.keyCode()(function(){
-  
+// add txt to input press enter to add to list
+$("input").on("keypress",function(event){
+    if(event.which === 13){
   $('ol').append('<li>' + $('input').val() + '   <button>x</button></li>');
    $("input").val("");
+  $("p").remove();
+  }
 });
 
 
